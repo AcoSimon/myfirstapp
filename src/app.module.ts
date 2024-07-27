@@ -4,15 +4,15 @@ import { Module } from '@nestjs/common';
 import { ProjectsModule } from './projects/projects.module';
 import { UsersModule } from './users/users.module';
 import { TaskModule } from './task/task.module';
-// Importamos el controlador HelloController
+// Importamos los controladores
 import { HelloController } from './hello/hello.controller';
+import { BanaversoModule } from './banaverso/banaverso.module';
 
-// Usamos el decorador @Module para definir el módulo principal de la aplicación
 @Module({
   // Importamos otros módulos para que estén disponibles en el módulo principal
-  imports: [ProjectsModule, UsersModule, TaskModule],
+  imports: [ProjectsModule, UsersModule, TaskModule, BanaversoModule, ],
   // Declaramos los controladores que pertenecen a este módulo
-  controllers: [HelloController],
+  controllers: [HelloController, ],
 })
 // Exportamos la clase AppModule como el módulo principal de la aplicación
 export class AppModule {}
